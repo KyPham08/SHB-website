@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ngân hàng SHB - Đối tác tin cậy</title>
+    <link rel = "icon" href = "images/shb.png"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .mySlides {display:none}
+        .w3-left, .w3-right, .w3-badge {cursor:pointer}
+        .w3-badge {height:13px;width:13px;padding:0}
+    </style>
+</head>
+<body>
+    <div class = "topnav">
+        <a class="active" href="#home"><strong>Home</strong></a>
+        <a href="#ind_banking"><strong>INDIVIDUAL BANKING</strong></a>
+        <a href="#corp_banking"><strong>CORPORATE BANKING</strong></a>
+        <a href="#investor"><strong>INVESTOR</strong></a>
+        <a href="#news"><strong>NEWS</strong></a>
+        <a href="#about us"><strong>ABOUT US</strong></a>
+        <a href="#career"><strong>CAREER</strong></a>
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="w3-container">
+        <div class="w3-content w3-display-container" style="max-width:1600px">
+            <img class="mySlides" src="images/banner1.png" style="width:100%">
+            <img class="mySlides" src="images/banner2.png" style="width:100%">
+            <img class="mySlides" src="images/banner3.png" style="width:100%">
+            <img class="mySlides" src="images/banner4.png" style="width:100%">
+            <img class="mySlides" src="images/banner5.png" style="width:100%">
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+            </div>
+        </div>
+    </div>
+    <div class="solutions">
+        <h1>SOLUTIONS FOR CUSTOMERS</h1>
+        <div class = "row">
+            <div class="column">
+                <h2>INDIVIDUAL BANKING</h2>
+                <img src="images/column1.jpg">
+                <p>Promotion</p>
+                <p>Card</p>
+                <p>Savings</p>
+                <p>Money transfer service</p>
+                <a href="">More >></a>
+            </div>
+            <div class="column">
+                <h2>CORPORATE BANKING</h2>
+                <img src="images/column2.jpg">
+                <p>Preferential products & services</p>
+                <p>Credit</p>
+                <p>Deposit and Account Management</p>
+                <p>Guarantee service</p>
+                <a href="">More >></a>
+            </div>
+            <div class="column">
+                <h2>SHB VIP BANKING</h2>
+                <img src="images/column1.jpg">
+                <p>Promotion</p>
+                <p>Card</p>
+                <p>Savings</p>
+                <p>Money transfer service</p>
+                <a href="">More >></a>
+            </div>
+            <div class="column">
+                <h2>QUICK ACCESS</h2>
+                <img src="images/column3.jpg">
+                <p>Interest rate</p>
+                <a href="">More >></a>
+            </div>
+            <hr>
+        </div>
+        <hr>
+    </div>
+    <div class="credits">
+        
+    </div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+function currentDiv(n) {
+    showDivs(slideIndex = n);
+}
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " w3-white";
+}
+</script>
+</body>
+</html>
